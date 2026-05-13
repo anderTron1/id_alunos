@@ -13,7 +13,8 @@ Aplicação Flask que serve um editor de código (Monaco Editor) no navegador e 
 5. [Baixar o Monaco Editor (offline)](#5-baixar-o-monaco-editor-offline)
 6. [Executar o servidor](#6-executar-o-servidor)
 7. [Acessar pelo navegador](#7-acessar-pelo-navegador)
-8. [Solução de problemas](#8-solução-de-problemas)
+8. [Linguagens suportadas](#8-linguagens-suportadas)
+9. [Solução de problemas](#9-solução-de-problemas)
 
 ---
 
@@ -179,7 +180,24 @@ A saída esperada:
 
 ---
 
-## 8. Solução de problemas
+## 8. Linguagens suportadas
+
+A plataforma oferece destaque de sintaxe (Monaco) para várias linguagens, mas só algumas podem ser **executadas** ou **visualizadas** diretamente:
+
+| Linguagem | Extensão | Executar (botão ▶) | Abrir no navegador | Onde roda |
+|---|---|---|---|---|
+| **Python** | `.py` | ✅ | — | Servidor (subprocess Python, timeout 10s) |
+| **JavaScript** | `.js` | ✅ | ✅ | Navegador (`new Function()`, `console.log` aparece no terminal) |
+| **HTML** | `.html`, `.htm` | — | ✅ | Navegador (preview via Blob) |
+| **CSS** | `.css` | — | ✅ | Navegador (preview via Blob) |
+
+Outras extensões reconhecidas para **edição com destaque de sintaxe** (mas sem execução): TypeScript, JSON, Markdown, XML, SQL, Shell, YAML.
+
+> Atalho: pressione **F5** para executar o arquivo atual (quando suportado).
+
+---
+
+## 9. Solução de problemas
 
 | Problema | Causa provável | Solução |
 |---|---|---|
